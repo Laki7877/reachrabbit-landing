@@ -115,7 +115,7 @@ hr.primary{
       color: @color-white;
       padding: 0px 0px 5px 0px;
       margin: 20px 15px 15px 15px;
-      transition: .5s;
+      // transition: .5s;
       &:hover{
         color: @color-theme-primary;
       }
@@ -137,6 +137,43 @@ hr.primary{
         background: @color-white;
         color: @color-theme-primary;
       }
+    }
+    li.open > a, li.open:hover > a{
+      background: @color-white !important;
+      color: @color-theme-primary !important;
+    }
+    li.dropdown:hover{
+      > a{
+        background: @color-white !important;
+        color: @color-theme-primary !important;
+      }
+      .dropdown-menu{
+        display: block;
+      }
+    }
+    .dropdown-menu{
+      border: 0px;
+      border-radius: 2px;
+      margin-right: 15px;
+      min-width: 80px;
+      li > a{
+        color: @color-black;
+        font-weight: bold;
+        padding: 5px 10px;
+        margin: 0px;
+        &:hover{
+          color: @color-theme-primary;
+          background: @color-white;
+        }
+      }
+    }
+    .dropdown-menu:after {
+      position: absolute;
+      bottom: 100%;
+      right: 15px;
+      border: 8px solid transparent;
+      border-bottom-color: @color-white;
+      content: '';
     }
   }
 }
