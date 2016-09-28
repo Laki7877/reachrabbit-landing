@@ -581,7 +581,7 @@ hr.primary{
 
 /*---Footer---*/
 footer{
-  padding: 60px 15px;
+  padding: 60px 0px;
   background: @color-black;
   h4{
     color: @color-grey;
@@ -624,6 +624,10 @@ footer{
   &:hover{
     bottom: 0px;
     box-shadow: @global-shadow-depth-3;
+  }
+  /* Only Extra Small devices (XS) */
+  @media only screen and (max-width: 768px) {
+    display: none;
   }
 }
 
