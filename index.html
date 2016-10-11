@@ -449,9 +449,9 @@ src="https://www.facebook.com/tr?id=1603865623240766&ev=PageView&noscript=1"
               return item.split("=");
           }).filter(function(c){ return c[0] == "ref"; });
           //Attach ref to all a href tag
-          if(ref.length > 0) 
-            document.querySelectorAll("a").forEach(function(x){ x.href = x.href + "?ref=" + ref[0] })
-
+          if(ref.length > 0){
+            document.querySelectorAll("a").forEach(function(x){ x.href = x.href + "?ref=" + ref[0][1] })
+          }
     </script>
 
   </body>
