@@ -201,17 +201,23 @@ hr.primary{
 
 /*---Jumbotron---*/
 .jumbotron{
-  // background-image: linear-gradient(135deg, #079085 0%, #1BB7AA 100%);
-  background: url("../images/bg-carrot.png") repeat @color-theme-secondary-darker;
+  // background-image: linear-gradient(135deg, #1BB7AA 0%, #079085 100%);
+  // background: url("../images/bg-carrot.png") repeat @color-theme-secondary-darker;
+
+  background: url("../images/bg-people.jpg") repeat @color-theme-secondary-darker;
+  /* Only Extra Small devices (XS) */
+  @media only screen and (max-width: 768px) {
+    background-image: linear-gradient(135deg, #1BB7AA 0%, #079085 100%);
+  }
   background-attachment: fixed;
   color: @color-white;
-  min-height: 640px;
+  min-height: 480px;
   text-align: center;
   padding-bottom: 0px;
   margin-bottom: 0px;
   h1{
     font-size: 32px;
-    margin-top: 90px;
+    margin-top: 120px;
     margin-bottom: 10px;
   }
   h2{
@@ -228,62 +234,10 @@ hr.primary{
     }
   }
   .btn-primary{
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 40px;
   }
-  .jumbotron-screenshots{
-    text-align: center;
-    position: relative;
-    margin: 0px 30px;
-    .screenshot{
-      &:extend(.img-responsive);
-      margin: auto;
-      animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
-      -webkit-animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
-    }
-    @keyframes animLoadedContent {
-        from {
-            opacity: 0;
-            transform: translate3d(0,200px,0);
-        }
-    }
 
-    @-webkit-keyframes animLoadedContent {
-        from {
-            opacity: 0;
-            -webkit-transform: translate3d(0,200px,0);
-        }
-    }
-    .screenshot-1{
-      &:extend(.screenshot);
-      position: relative;
-      float: left;
-      z-index: 1;
-      animation-delay: 0.6s;
-      -webkit-animation-delay: 0.6s;
-    }
-    .screenshot-2{
-      &:extend(.screenshot);
-      position: absolute;
-      margin: auto;
-      top: 0;
-      right: 0;
-      left: 0;
-      z-index: 3;
-      animation-delay: 0.3s;
-      -webkit-animation-delay: 0.3s;
-    }
-    .screenshot-3{
-      &:extend(.screenshot);
-      position: absolute;
-      margin: 0 auto;
-      top: 0;
-      right: 0;
-      z-index: 2;
-      animation-delay: 0.9s;
-      -webkit-animation-delay: 0.9s;
-    }
-  }
 
   .mobile-logo{
     max-width: 400px;
@@ -298,13 +252,6 @@ hr.primary{
     color: @color-white;
     background-color: rgba(62, 74, 94, 0.8);
     border-radius: 3px;
-  }
-
-  /* Only Medium devices (MD) */
-  @media only screen and (min-width: 993px) and (max-width: 1200px) {
-    .jumbotron-screenshots{
-      margin: 0px;
-    }
   }
   /* Only Small devices (SM) */
   @media only screen and (min-width: 769px) and (max-width: 992px) {
@@ -323,9 +270,6 @@ hr.primary{
   /* Only Extra Small devices (XS) */
   @media only screen and (max-width: 768px) {
     min-height: 200px;
-    .jumbotron-screenshots{
-      display: none;
-    }
     h1{
       margin-top: 0px;
       margin-bottom: 30px;
@@ -352,6 +296,74 @@ hr.primary{
     }
   }
 }
+
+/*---Jumbotron-Screenshots---*/
+.jumbotron-screenshots{
+  text-align: center;
+  position: relative;
+  margin: 0px 30px;
+  .screenshot{
+    &:extend(.img-responsive);
+    margin: auto;
+    // animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
+    // -webkit-animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
+  }
+  // @keyframes animLoadedContent {
+  //     from {
+  //         opacity: 0;
+  //         transform: translate3d(0,200px,0);
+  //     }
+  // }
+  //
+  // @-webkit-keyframes animLoadedContent {
+  //     from {
+  //         opacity: 0;
+  //         -webkit-transform: translate3d(0,200px,0);
+  //     }
+  // }
+  .screenshot-1{
+    &:extend(.screenshot);
+    position: relative;
+    float: left;
+    z-index: 1;
+    animation-delay: 0.6s;
+    -webkit-animation-delay: 0.6s;
+  }
+  .screenshot-2{
+    &:extend(.screenshot);
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 3;
+    animation-delay: 0.3s;
+    -webkit-animation-delay: 0.3s;
+  }
+  .screenshot-3{
+    &:extend(.screenshot);
+    position: absolute;
+    margin: 0 auto;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    animation-delay: 0.9s;
+    -webkit-animation-delay: 0.9s;
+  }
+}
+/* Only Medium devices (MD) */
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  .jumbotron-screenshots{
+    margin: 0px;
+  }
+}
+/* Only Small devices (SM) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .jumbotron-screenshots{
+    display: none;
+  }
+}
+
 /*---Conter---*/
 .content{
   display: block;
@@ -562,6 +574,7 @@ hr.primary{
     background: url("../images/bg-carrot.png") repeat @color-theme-secondary-darker;
     background-attachment: fixed;
     color: @color-grey-lighter;
+    padding-bottom: 0px;
     .logo{
       width: 346px;
       margin-bottom: 20px;
@@ -577,6 +590,9 @@ hr.primary{
     p{
       color: @color-grey;
       margin-bottom: 20px;
+    }
+    .btn-primary{
+      margin-bottom: 50px;
     }
 }
 
