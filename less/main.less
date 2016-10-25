@@ -202,13 +202,8 @@ hr.primary{
 /*---Jumbotron---*/
 .jumbotron{
   // background-image: linear-gradient(135deg, #1BB7AA 0%, #079085 100%);
-  // background: url("../images/bg-carrot.png") repeat @color-theme-secondary-darker;
-
   background: url("../images/bg-people.jpg") repeat @color-theme-secondary-darker;
-  /* Only Extra Small devices (XS) */
-  @media only screen and (max-width: 768px) {
-    background-image: linear-gradient(135deg, #1BB7AA 0%, #079085 100%);
-  }
+
   background-attachment: fixed;
   color: @color-white;
   min-height: 480px;
@@ -217,8 +212,8 @@ hr.primary{
   margin-bottom: 0px;
   h1{
     font-size: 32px;
-    margin-top: 120px;
-    margin-bottom: 10px;
+    margin-top: 115px;
+    margin-bottom: 15px;
   }
   h2{
     font-size: 28px;
@@ -227,7 +222,7 @@ hr.primary{
   }
   .feature{
     color: @color-white;
-    font-size: 16px;
+    font-size: 20px;
     margin: 0px 30px;
     .fa{
       color: @color-theme-primary;
@@ -240,7 +235,7 @@ hr.primary{
 
 
   .mobile-logo{
-    max-width: 400px;
+    max-width: 320px;
     hr{
       margin-bottom: 10px;
     }
@@ -269,6 +264,7 @@ hr.primary{
   }
   /* Only Extra Small devices (XS) */
   @media only screen and (max-width: 768px) {
+    background-image: linear-gradient(135deg, #079085 0%, #1BB7AA 100%);
     min-height: 200px;
     h1{
       margin-top: 0px;
