@@ -92,6 +92,9 @@ hr.primary{
 .btn-primary{
   .button-variant(@color-white, @color-theme-primary, @color-theme-primary);
 }
+.btn-secondary{
+  .button-variant(@color-theme-primary, @color-white, @color-white);
+}
 .btn-lg{
   font-size: 24px;
   min-width: 240px;
@@ -198,6 +201,30 @@ hr.primary{
     display: none;
   }
 }
+
+.navbar-minimal{
+  background: @color-black;
+  box-shadow: @global-shadow-depth-1 !important;
+  position: relative;
+  .navbar-brand{
+    img{
+      height: 20px;
+    }
+  }
+  .navbar-right{
+    li{
+      a{
+        font-family: @font-primary;
+        color: @color-white;
+        &:hover{
+          color: @color-theme-primary;
+          background: @color-black;
+        }
+      }
+    }
+  }
+}
+
 
 /*---Jumbotron---*/
 .jumbotron{
@@ -367,11 +394,7 @@ hr.primary{
 
 /*---Conter---*/
 .content{
-  display: block;
-  position: relative;
-  width: 100%;
   background: @color-white;
-  z-index: 9;
   section{
     padding: 60px 0px;
   }
@@ -588,6 +611,37 @@ hr.primary{
   }
 }
 
+/*---How-to---*/
+#howto{
+  background: @color-grey;
+  .howto-step{
+    .make-xs-column(12);
+    .make-sm-column(6);
+    .make-md-column(4);
+    .make-lg-column(4);
+    text-align: center;
+    margin-bottom: 20px;
+    img{
+      width: 100%;
+      box-shadow: @global-shadow-depth-1;
+      border-radius: 3px;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .howto-step{
+      margin-bottom: 30px;
+      padding: 0px 60px;
+    }
+  }
+}
+
+.influencer-landing{
+  #howto{
+    background: @color-black;
+    color: @color-white;
+  }
+}
+
 /*---Last CTA---*/
 #last-cta{
     background: url("../images/bg-carrot.png") repeat @color-theme-secondary-darker;
@@ -614,6 +668,23 @@ hr.primary{
       margin-bottom: 50px;
     }
 }
+
+/*---Tutorial---*/
+.number-circle{
+  display: inline-block;
+  padding: 0px 6px;
+  background: @color-theme-secondary;
+  color: @color-white;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+#tutorial-content{
+  .tutorial-image{
+    width: 100%;
+    margin: 10px 0px;
+  }
+}
+
 
 /*---Footer---*/
 footer{
